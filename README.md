@@ -67,8 +67,7 @@ Code
 
 ## 🚀 Getting Started
 
-### 👉 Open on GitHub Pages  
-**https://aamirkpathan.github.io/dawnedEDUWeb/**
+### 👉 Open on GitHub Pages 
 
 No server required — everything runs client‑side.
 
