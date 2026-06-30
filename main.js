@@ -1,6 +1,6 @@
-// =========================
-// DESKTOP ICONS → OPEN WINDOWS
-// =========================
+/* =========================
+   DESKTOP ICONS → OPEN WINDOWS
+========================= */
 
 const taskIcons = document.querySelectorAll(".desktop-icon");
 const windows = document.querySelectorAll(".window");
@@ -26,9 +26,9 @@ taskIcons.forEach(icon => {
   });
 });
 
-// =========================
-// CLOSE / MINIMIZE BUTTONS
-// =========================
+/* =========================
+   CLOSE / MINIMIZE BUTTONS
+========================= */
 
 windows.forEach(win => {
   const closeBtn = win.querySelector(".btn-close");
@@ -38,9 +38,9 @@ windows.forEach(win => {
   if (minBtn) minBtn.addEventListener("click", () => win.style.display = "none");
 });
 
-// =========================
-// DRAGGABLE WINDOWS
-// =========================
+/* =========================
+   DRAGGABLE WINDOWS
+========================= */
 
 let dragData = null;
 
@@ -74,9 +74,9 @@ document.addEventListener("mouseup", () => {
   document.body.style.userSelect = "";
 });
 
-// =========================
-// RESIZABLE WINDOWS
-// =========================
+/* =========================
+   RESIZABLE WINDOWS
+========================= */
 
 let resizeData = null;
 
@@ -111,9 +111,9 @@ document.addEventListener("mouseup", () => {
   resizeData = null;
 });
 
-// =========================
-// TASKBAR CLOCK
-// =========================
+/* =========================
+   TASKBAR CLOCK
+========================= */
 
 const clockEl = document.getElementById("clock");
 
@@ -138,9 +138,9 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
-// =========================
-// POMODORO TIMER
-// =========================
+/* =========================
+   POMODORO TIMER
+========================= */
 
 let pomoInterval = null;
 let pomoSeconds = 0;
@@ -206,17 +206,17 @@ document.getElementById("pomo-reset").addEventListener("click", () => {
 
 setPomodoro("work");
 
-// =========================
-// MOTIVATION TAB
-// =========================
+/* =========================
+   MOTIVATION TAB
+========================= */
 
 document.getElementById("motivation-launch-btn").addEventListener("click", () => {
   window.open("https://yourmotivationwebsite.com", "_blank");
 });
 
-// =========================
-// DAILY XP SYSTEM
-// =========================
+/* =========================
+   DAILY XP SYSTEM
+========================= */
 
 let xpState = JSON.parse(localStorage.getItem("daily_xp_state") || `{
   "level": 1,
@@ -255,9 +255,9 @@ document.querySelectorAll(".xp-actions button").forEach(btn => {
 
 renderXP();
 
-// =========================
-// SPOTIFY PLAYER
-// =========================
+/* =========================
+   SPOTIFY PLAYER
+========================= */
 
 let spotifyPlayer;
 let spotifyDeviceId = null;
@@ -317,9 +317,9 @@ document.getElementById("spotify-play").addEventListener("click", () => {
   });
 });
 
-// =========================
-// CALENDAR SYSTEM
-// =========================
+/* =========================
+   CALENDAR SYSTEM
+========================= */
 
 const calGrid = document.getElementById("calendar-grid");
 const calMonthLabel = document.getElementById("cal-month");
@@ -458,3 +458,11 @@ document.getElementById("cal-next").addEventListener("click", () => {
 });
 
 renderCalendar();
+
+/* =========================
+   GOOGLE APP
+========================= */
+
+document.getElementById("google-launch-btn").addEventListener("click", () => {
+  window.open("https://www.google.com", "_blank");
+});
