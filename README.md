@@ -43,28 +43,6 @@ Built entirely with HTML, CSS, and JavaScript, Dawned Edu Web OS simulates a des
 
 ---
 
-## 📂 Project Structure
-
-Dawned-Edu-Web-OS/
-│
-├── index.html        # Main OS layout and windows
-├── style.css         # UI styling and theme
-├── main.js           # App logic, window system, calendar, XP, etc.
-│
-├── icons/            # PNG icons for desktop apps
-│   ├── pomodoro.png
-│   ├── music.png
-│   ├── motivation.png
-│   ├── xp.png
-│   └── calendar.png
-│
-├── LICENSE           # MIT License
-└── README.md         # Project documentation
-
-Code
-
----
-
 ## 🚀 Getting Started
 👉 Open on [GitHub Pages](https://aamirkpathan.github.io/dawnedEDUWeb/) 
 
