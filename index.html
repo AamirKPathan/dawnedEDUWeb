@@ -1,241 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Dawned Edu Web OS</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <meta charset="UTF-8" />
+    <title>Dawned Edu Web OS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
 </head>
+
 <body>
-  <div id="desktop">
+    <div id="desktop">
 
-    <!-- Desktop icons -->
-    <div id="desktop-icons">
-      <div class="desktop-icon" data-target="window-pomodoro">
-        <img src="icons/pomodoro.png">
-        <span>Pomodoro</span>
-      </div>
+        <!-- Desktop icons -->
+        <div id="desktop-icons">
+            <div class="desktop-icon" data-target="window-pomodoro">
+                <img src="icons/pomodoro.png">
+                <span>Pomodoro</span>
+            </div>
 
-      <div class="desktop-icon" data-target="window-music">
-        <img src="icons/music.png">
-        <span>Music</span>
-      </div>
+            <div class="desktop-icon" data-target="window-music">
+                <img src="icons/music.png">
+                <span>Music</span>
+            </div>
 
-      <div class="desktop-icon" data-target="window-motivation">
-        <img src="icons/motivation.png">
-        <span>Motivation</span>
-      </div>
+            <div class="desktop-icon" data-target="window-motivation">
+                <img src="icons/motivation.png">
+                <span>Motivation</span>
+            </div>
 
-      <div class="desktop-icon" data-target="window-xp">
-        <img src="icons/xp.png">
-        <span>Daily XP</span>
-      </div>
+            <div class="desktop-icon" data-target="window-xp">
+                <img src="icons/xp.png">
+                <span>Daily XP</span>
+            </div>
 
-      <div class="desktop-icon" data-target="window-calendar">
-        <img src="icons/calendar.png">
-        <span>Calendar</span>
-      </div>
-      <div class="desktop-icon" data-target="window-google">
-        <img src="icons/google.png">
-        <span>Google</span>
-      </div>
-    </div>
-    <!-- Window: Google -->
-<div class="window" id="window-google" style="top: 320px; left: 880px;">
-  <div class="window-header">
-    <span class="window-title">Google 🌐</span>
-    <div class="window-controls">
-      <button class="btn-min">–</button>
-      <button class="btn-close">×</button>
-    </div>
-  </div>
-
-  <div class="window-body">
-    <h2>Google</h2>
-    <p>Open Google in a new tab.</p>
-
-    <button id="google-launch-btn" class="app-launch-btn">
-      Open Google
-    </button>
-
-    <p class="app-note">WIP Placeholder Link</p>
-  </div>
-
-  <div class="window-resize"></div>
-</div>
-
-    <!-- Pomodoro Window -->
-    <div class="window" id="window-pomodoro" style="top: 80px; left: 80px;">
-      <div class="window-header">
-        <span class="window-title">Pomodoro ⏱️</span>
-        <div class="window-controls">
-          <button class="btn-min">–</button>
-          <button class="btn-close">×</button>
+            <div class="desktop-icon" data-target="window-calendar">
+                <img src="icons/calendar.png">
+                <span>Calendar</span>
+            </div>
+            <div class="desktop-icon" data-target="window-google">
+                <img src="icons/google.png">
+                <span>Google</span>
+            </div>
         </div>
-      </div>
+        <!-- Window: Google -->
+        <div class="window" id="window-google" style="top: 320px; left: 880px;">
+            <div class="window-header">
+                <span class="window-title">Google 🌐</span>
+                <div class="window-controls">
+                    <button class="btn-min">–</button>
+                    <button class="btn-close">×</button>
+                </div>
+            </div>
 
-      <div class="window-body">
-        <h2>Pomodoro</h2>
+            <div class="window-body">
+                <h2>Google</h2>
+                <p>Open Google in a new tab.</p>
 
-        <div class="pomo-settings">
-          <label>Work (minutes):
-            <input type="number" id="pomo-work" value="25">
-          </label>
-          <label>Break (minutes):
-            <input type="number" id="pomo-break" value="5">
-          </label>
+                <button id="google-launch-btn" class="app-launch-btn">
+                    Open Google
+                </button>
+
+                <p class="app-note">WIP Placeholder Link</p>
+            </div>
+
+            <div class="window-resize"></div>
         </div>
 
-        <p id="pomo-label">Work Session</p>
-        <p id="pomo-time" class="pomo-time">25:00</p>
+        <!-- Pomodoro Window -->
+        <div class="window" id="window-pomodoro" style="top: 80px; left: 80px;">
+            <div class="window-header">
+                <span class="window-title">Pomodoro ⏱️</span>
+                <div class="window-controls">
+                    <button class="btn-min">–</button>
+                    <button class="btn-close">×</button>
+                </div>
+            </div>
 
-        <div class="pomo-progress">
-          <div id="pomo-progress-bar"></div>
+            <div class="window-body">
+                <h2>Pomodoro</h2>
+
+                <div class="pomo-settings">
+                    <label>Work (minutes):
+                        <input type="number" id="pomo-work" value="25">
+                    </label>
+                    <label>Break (minutes):
+                        <input type="number" id="pomo-break" value="5">
+                    </label>
+                </div>
+
+                <p id="pomo-label">Work Session</p>
+                <p id="pomo-time" class="pomo-time">25:00</p>
+
+                <div class="pomo-progress">
+                    <div id="pomo-progress-bar"></div>
+                </div>
+
+                <div class="pomo-controls">
+                    <button id="pomo-start">Start</button>
+                    <button id="pomo-pause">Pause</button>
+                    <button id="pomo-reset">Reset</button>
+                </div>
+            </div>
+
+            <div class="window-resize"></div>
         </div>
 
-        <div class="pomo-controls">
-          <button id="pomo-start">Start</button>
-          <button id="pomo-pause">Pause</button>
-          <button id="pomo-reset">Reset</button>
-        </div>
-      </div>
+        <!-- Music Window -->
+        <div class="window" id="window-music" style="top: 100px; left: 480px;">
+            <div class="window-header">
+                <span class="window-title">Music Player 🎧</span>
+                <div class="window-controls">
+                    <button class="btn-min">–</button>
+                    <button class="btn-close">×</button>
+                </div>
+            </div>
 
-      <div class="window-resize"></div>
-    </div>
+            <div class="window-body">
+                <h2>Spotify Player</h2>
 
-    <!-- Music Window -->
-    <div class="window" id="window-music" style="top: 100px; left: 480px;">
-      <div class="window-header">
-        <span class="window-title">Music Player 🎧</span>
-        <div class="window-controls">
-          <button class="btn-min">–</button>
-          <button class="btn-close">×</button>
-        </div>
-      </div>
+                <button id="spotify-login">Login to Spotify</button>
 
-      <div class="window-body">
-        <h2>Spotify Player</h2>
+                <div id="spotify-status" class="spotify-status">
+                    Not connected
+                </div>
 
-        <button id="spotify-login">Login to Spotify</button>
+                <div class="spotify-input-row">
+                    <input id="spotify-track" placeholder="Spotify track URI (spotify:track:ID)" />
+                    <button id="spotify-play">Play</button>
+                </div>
+            </div>
 
-        <div id="spotify-status" class="spotify-status">
-          Not connected
-        </div>
-
-        <div class="spotify-input-row">
-          <input id="spotify-track" placeholder="Spotify track URI (spotify:track:ID)" />
-          <button id="spotify-play">Play</button>
-        </div>
-      </div>
-
-      <div class="window-resize"></div>
-    </div>
-
-    <!-- Motivation Window -->
-    <div class="window" id="window-motivation" style="top: 260px; left: 80px;">
-      <div class="window-header">
-        <span class="window-title">Motivation 🚀</span>
-        <div class="window-controls">
-          <button class="btn-min">–</button>
-          <button class="btn-close">×</button>
-        </div>
-      </div>
-
-      <div class="window-body">
-        <h2>Motivation Tab</h2>
-        <p>Open my custom motivation page in a new tab.</p>
-
-        <button id="motivation-launch-btn" class="app-launch-btn">
-          Open Motivation Tab
-        </button>
-
-        <p class="app-note">WIP Placeholder Link</p>
-      </div>
-
-      <div class="window-resize"></div>
-    </div>
-
-    <!-- XP Window -->
-    <div class="window" id="window-xp" style="top: 260px; left: 480px;">
-      <div class="window-header">
-        <span class="window-title">Daily XP 🎮</span>
-        <div class="window-controls">
-          <button class="btn-min">–</button>
-          <button class="btn-close">×</button>
-        </div>
-      </div>
-
-      <div class="window-body">
-        <h2>Daily XP</h2>
-
-        <div class="xp-summary">
-          <div>Level: <span id="xp-level">1</span></div>
-          <div>XP: <span id="xp-current">0</span> / <span id="xp-next">100</span></div>
-          <div class="xp-bar">
-            <div id="xp-bar-fill"></div>
-          </div>
+            <div class="window-resize"></div>
         </div>
 
-        <div class="xp-actions">
-          <button data-xp="10">Homework +10</button>
-          <button data-xp="5">Drink Water +5</button>
-          <button data-xp="15">Workout +15</button>
-          <button data-xp="20">Project Work +20</button>
-        </div>
-      </div>
+        <!-- Motivation Window -->
+        <div class="window" id="window-motivation" style="top: 260px; left: 80px;">
+            <div class="window-header">
+                <span class="window-title">Motivation 🚀</span>
+                <div class="window-controls">
+                    <button class="btn-min">–</button>
+                    <button class="btn-close">×</button>
+                </div>
+            </div>
 
-      <div class="window-resize"></div>
-    </div>
+            <div class="window-body">
+                <h2>Motivation Tab</h2>
+                <p>Open my custom motivation page in a new tab.</p>
 
-    <!-- Calendar Window -->
-    <div class="window" id="window-calendar" style="top: 120px; left: 880px;">
-      <div class="window-header">
-        <span class="window-title">Calendar 📅</span>
-        <div class="window-controls">
-          <button class="btn-min">–</button>
-          <button class="btn-close">×</button>
-        </div>
-      </div>
+                <button id="motivation-launch-btn" class="app-launch-btn">
+                    Open Motivation Tab
+                </button>
 
-      <div class="window-body">
+                <p class="app-note">WIP Placeholder Link</p>
+            </div>
 
-        <div class="calendar-controls">
-          <button id="cal-prev">◀</button>
-          <span id="cal-month"></span>
-          <button id="cal-next">▶</button>
+            <div class="window-resize"></div>
         </div>
 
-        <div id="calendar-grid" class="calendar-grid"></div>
+        <!-- XP Window -->
+        <div class="window" id="window-xp" style="top: 260px; left: 480px;">
+            <div class="window-header">
+                <span class="window-title">Daily XP 🎮</span>
+                <div class="window-controls">
+                    <button class="btn-min">–</button>
+                    <button class="btn-close">×</button>
+                </div>
+            </div>
 
-        <div id="calendar-event-panel" class="calendar-event-panel">
-          <h3 id="event-date-label">Select a day</h3>
+            <div class="window-body">
+                <h2>Daily XP</h2>
 
-          <div id="event-list"></div>
+                <div class="xp-summary">
+                    <div>Level: <span id="xp-level">1</span></div>
+                    <div>XP: <span id="xp-current">0</span> / <span id="xp-next">100</span></div>
+                    <div class="xp-bar">
+                        <div id="xp-bar-fill"></div>
+                    </div>
+                </div>
 
-          <h4>Add Event</h4>
-          <input id="event-title" placeholder="Event title">
-          <textarea id="event-desc" placeholder="Event description"></textarea>
-          <button id="event-add-btn">Add Event</button>
+                <div class="xp-actions">
+                    <button data-xp="10">Homework +10</button>
+                    <button data-xp="5">Drink Water +5</button>
+                    <button data-xp="15">Workout +15</button>
+                    <button data-xp="20">Project Work +20</button>
+                </div>
+            </div>
+
+            <div class="window-resize"></div>
         </div>
 
-      </div>
+        <!-- Calendar Window -->
+        <div class="window" id="window-calendar" style="top: 120px; left: 880px;">
+            <div class="window-header">
+                <span class="window-title">Calendar 📅</span>
+                <div class="window-controls">
+                    <button class="btn-min">–</button>
+                    <button class="btn-close">×</button>
+                </div>
+            </div>
 
-      <div class="window-resize"></div>
-    </div>
+            <div class="window-body">
 
-  </div>
+                <div class="calendar-controls">
+                    <button id="cal-prev">◀</button>
+                    <span id="cal-month"></span>
+                    <button id="cal-next">▶</button>
+                </div>
 
-  <!-- Taskbar -->
-  <div id="taskbar">
-    <div class="taskbar-left">
-      <span class="logo">🌅 Dawned Edu Web OS</span>
+                <div id="calendar-grid" class="calendar-grid"></div>
+
+                <div id="calendar-event-panel" class="calendar-event-panel">
+                    <h3 id="event-date-label">Select a day</h3>
+
+                    <div id="event-list"></div>
+
+                    <h4>Add Event</h4>
+                    <input id="event-title" placeholder="Event title">
+                    <textarea id="event-desc" placeholder="Event description"></textarea>
+                    <button id="event-add-btn">Add Event</button>
+                </div>
+
+            </div>
+
+            <div class="window-resize"></div>
+        </div>
+
     </div>
 
-    <div class="taskbar-right">
-      <span id="clock"></span>
-    </div>
-  </div>
+    <!-- Taskbar -->
+    <div id="taskbar">
+        <div class="taskbar-left">
+            <span class="logo">🌅 Dawned Edu Web OS</span>
+        </div>
 
-  <script src="main.js"></script>
+        <div class="taskbar-right">
+            <span id="clock"></span>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
