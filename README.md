@@ -1,75 +1,83 @@
-# 🌅 Dawned Edu Web OS
-A browser‑based mini operating system designed for productivity, learning, and fun.  
-Built entirely with HTML, CSS, and JavaScript, Dawned Edu Web OS simulates a desktop environment with draggable and resizable windows, apps, a taskbar, and desktop icons.
+Dawned Edu Web OS
+Dawned Edu Web OS is a browser-based mini operating system built with HTML, CSS, and JavaScript. It includes draggable windows, a taskbar, desktop icons, and several built‑in apps designed for productivity and learning.
 
----
+Features
+Desktop Environment
+Clickable desktop icons
 
-## ✨ Features
+Draggable windows
 
-### 🖥️ Desktop Environment
-- Clickable desktop icons  
-- Draggable windows  
-- Resizable windows (bottom‑right corner)  
-- Taskbar with live clock  
-- Sunrise gradient theme  
+Resizable windows
 
-### ⏱️ Pomodoro Timer
-- Custom work/break durations  
-- Progress bar  
-- Auto‑switch between work and break  
-- Alerts when sessions finish  
+Taskbar with a live clock
 
-### 🎧 Spotify Player
-- Login with Spotify  
-- Play tracks using Spotify URIs  
-- Uses Spotify Web Playback SDK  
+Sunrise gradient theme
 
-### 🚀 Motivation Tab
-- Opens a custom link in a new tab  
-- Displays “WIP Placeholder Link” inside the window  
+Pomodoro Timer
+Custom work and break durations
 
-### 🎮 Daily XP System
-- Earn XP for real‑life tasks  
-- Level up automatically  
-- XP saved in localStorage  
-- Progress bar  
+Progress bar
 
-### 📅 Calendar App
-- Month navigation  
-- Clickable days  
-- Add/delete events  
-- Events saved in localStorage  
-- Highlights today and selected day  
+Automatic session switching
 
----
+Alerts when sessions end
 
-## 🚀 Getting Started
-👉 Open on [GitHub Pages](https://aamirkpathan.github.io/dawnedEDUWeb/) 
+Spotify Player
+Login with Spotify
 
-No server required — everything runs client‑side.
+Play tracks using Spotify URIs
 
----
+Uses the Spotify Web Playback SDK
 
-## 🔧 Customization
+Motivation Tab
+Opens a custom link in a new tab
 
-You can customize:
-- Icons (`/icons/`)
-- Window positions  
-- Colors in `style.css`  
-- Motivation tab link in `main.js`  
-- Add new apps by copying a window block  
+Displays a placeholder message inside the window
 
----
+Daily XP System
+Earn XP for real-life tasks
 
-## 📝 Requirements
+Automatic leveling
 
-- Chrome, Edge, Firefox, or Safari  
-- Internet connection for Spotify playback  
-- Spotify Premium account (required by Spotify Web Playback SDK)
+XP saved in localStorage
 
----
+Progress bar
 
-## 📜 License
+Calendar App
+Month navigation
 
-This project is licensed under the MIT License.  
-See the `LICENSE` file for details.
+Clickable days
+
+Add and delete events
+
+Events saved in localStorage
+
+Highlights the current day
+
+Getting Started
+Open the project on GitHub Pages:
+https://aamirkpathan.github.io/dawnedEDUWeb/
+
+The entire system runs client-side. No server is required.
+
+Customization
+You can modify:
+
+Icons in the /icons/ folder
+
+Colors in style.css
+
+The motivation tab link in main.js
+
+App windows by copying an existing window block
+
+Requirements
+Chrome, Edge, Firefox, or Safari
+
+Internet connection for Spotify playback
+
+Spotify Premium account (required for the Web Playback SDK)
+
+License
+This project is licensed under the MIT License.
+See the LICENSE file for details.
