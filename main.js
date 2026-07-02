@@ -276,10 +276,10 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
   spotifyPlayer.connect();
 };
+
 document.getElementById("spotify-login").addEventListener("click", () => {
   alert("Out of service");
 });
-
 
 if (window.location.hash.includes("access_token")) {
   const token = window.location.hash.split("access_token=")[1].split("&")[0];
