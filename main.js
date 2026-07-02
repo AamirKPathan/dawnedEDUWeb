@@ -260,7 +260,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 };
 
 document.getElementById("spotify-login").addEventListener("click", () => {
-  alert("Out of service");
+  alert("Out of service. This is intentional.");
 });
 
 if (window.location.hash.includes("access_token")) {
