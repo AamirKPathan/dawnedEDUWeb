@@ -197,7 +197,7 @@ setPomodoro("work");
 // Motivation tab
 
 document.getElementById("motivation-launch-btn").addEventListener("click", () => {
-  window.open("https://yourmotivationwebsite.com", "_blank");
+  window.open("https://aamirkpathan.github.io/dawnedMotivation/", "_blank");
 });
 
 // Daily XP system
