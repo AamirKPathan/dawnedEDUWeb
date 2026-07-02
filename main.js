@@ -276,20 +276,10 @@ window.onSpotifyWebPlaybackSDKReady = () => {
 
   spotifyPlayer.connect();
 };
-
 document.getElementById("spotify-login").addEventListener("click", () => {
-  const clientId = "YOUR_SPOTIFY_CLIENT_ID";
-  const redirectUri = "YOUR_REDIRECT_URL";
-
-  const url =
-    "https://accounts.spotify.com/authorize" +
-    "?client_id=" + clientId +
-    "&response_type=token" +
-    "&redirect_uri=" + encodeURIComponent(redirectUri) +
-    "&scope=user-modify-playback-state";
-
-  window.location.href = url;
+  alert("Out of service");
 });
+
 
 if (window.location.hash.includes("access_token")) {
   const token = window.location.hash.split("access_token=")[1].split("&")[0];
