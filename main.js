@@ -1,6 +1,4 @@
-/* =========================
-   DESKTOP ICONS → OPEN WINDOWS
-========================= */
+// Desktop icons
 
 const taskIcons = document.querySelectorAll(".desktop-icon");
 const windows = document.querySelectorAll(".window");
@@ -26,9 +24,7 @@ taskIcons.forEach(icon => {
   });
 });
 
-/* =========================
-   CLOSE / MINIMIZE BUTTONS
-========================= */
+// Close and minimize buttons
 
 windows.forEach(win => {
   const closeBtn = win.querySelector(".btn-close");
@@ -38,9 +34,7 @@ windows.forEach(win => {
   if (minBtn) minBtn.addEventListener("click", () => win.style.display = "none");
 });
 
-/* =========================
-   DRAGGABLE WINDOWS
-========================= */
+// Draggable windows
 
 let dragData = null;
 
@@ -74,9 +68,7 @@ document.addEventListener("mouseup", () => {
   document.body.style.userSelect = "";
 });
 
-/* =========================
-   RESIZABLE WINDOWS
-========================= */
+// Resizable windows
 
 let resizeData = null;
 
@@ -111,9 +103,7 @@ document.addEventListener("mouseup", () => {
   resizeData = null;
 });
 
-/* =========================
-   TASKBAR CLOCK
-========================= */
+// Taskbar clock
 
 const clockEl = document.getElementById("clock");
 
@@ -138,9 +128,7 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
-/* =========================
-   POMODORO TIMER
-========================= */
+// Pomodoro timer
 
 let pomoInterval = null;
 let pomoSeconds = 0;
@@ -206,17 +194,13 @@ document.getElementById("pomo-reset").addEventListener("click", () => {
 
 setPomodoro("work");
 
-/* =========================
-   MOTIVATION TAB
-========================= */
+// Motivation tab
 
 document.getElementById("motivation-launch-btn").addEventListener("click", () => {
   window.open("https://yourmotivationwebsite.com", "_blank");
 });
 
-/* =========================
-   DAILY XP SYSTEM
-========================= */
+// Daily XP system
 
 let xpState = JSON.parse(localStorage.getItem("daily_xp_state") || `{
   "level": 1,
@@ -255,9 +239,7 @@ document.querySelectorAll(".xp-actions button").forEach(btn => {
 
 renderXP();
 
-/* =========================
-   SPOTIFY PLAYER
-========================= */
+// Spotify player
 
 let spotifyPlayer;
 let spotifyDeviceId = null;
@@ -307,9 +289,7 @@ document.getElementById("spotify-play").addEventListener("click", () => {
   });
 });
 
-/* =========================
-   CALENDAR SYSTEM
-========================= */
+// Calendar system
 
 const calGrid = document.getElementById("calendar-grid");
 const calMonthLabel = document.getElementById("cal-month");
@@ -449,9 +429,7 @@ document.getElementById("cal-next").addEventListener("click", () => {
 
 renderCalendar();
 
-/* =========================
-   GOOGLE APP
-========================= */
+// Google app
 
 document.getElementById("google-launch-btn").addEventListener("click", () => {
   window.open("https://www.google.com", "_blank");

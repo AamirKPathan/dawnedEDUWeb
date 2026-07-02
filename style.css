@@ -15,7 +15,6 @@
   --taskbar-bg: #15151d;
 }
 
-/* Background */
 body {
   background: radial-gradient(
     circle at bottom,
@@ -36,7 +35,6 @@ body {
   inset: 0 0 60px 0;
 }
 
-/* Desktop icons */
 #desktop-icons {
   position: absolute;
   top: 20px;
@@ -73,7 +71,6 @@ body {
   filter: brightness(1.2);
 }
 
-/* Windows */
 .window {
   position: absolute;
   width: 360px;
@@ -121,7 +118,6 @@ body {
   color: #000;
 }
 
-/* Resize handle */
 .window-resize {
   position: absolute;
   right: 0;
@@ -133,7 +129,6 @@ body {
   border-bottom-right-radius: 14px;
 }
 
-/* Pomodoro */
 .pomo-settings {
   display: flex;
   gap: 10px;
@@ -161,13 +156,11 @@ body {
   background: var(--accent-yellow);
 }
 
-/* Spotify */
 .spotify-status {
   margin-top: 10px;
   color: var(--accent-yellow);
 }
 
-/* Motivation Tab */
 .app-launch-btn {
   background: var(--accent-orange);
   color: #000;
@@ -185,7 +178,6 @@ body {
   transform: translateY(-1px);
 }
 
-/* Daily XP */
 .xp-bar {
   width: 100%;
   height: 8px;
@@ -200,7 +192,6 @@ body {
   background: var(--accent-yellow);
 }
 
-/* Buttons */
 button,
 .app-launch-btn,
 .xp-actions button,
@@ -246,7 +237,6 @@ button:hover {
   color: #fff;
 }
 
-/* Taskbar */
 #taskbar {
   position: absolute;
   left: 0;
@@ -284,7 +274,6 @@ button:hover {
   font-weight: 600;
 }
 
-/* Calendar */
 .calendar-controls {
   display: flex;
   justify-content: center;
