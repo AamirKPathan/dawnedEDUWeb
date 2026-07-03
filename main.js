@@ -239,7 +239,57 @@ document.querySelectorAll(".xp-actions button").forEach(btn => {
 
 renderXP();
 
-// CALENDAR SYSTEM (unchanged)
+// Spotify player
+
+let spotifyPlayer;
+let spotifyDeviceId = null;
+
+window.onSpotifyWebPlaybackSDKReady = () => {
+  spotifyPlayer = new Spotify.Player({
+    name: "Dawned Edu Web OS Player",
+    getOAuthToken: cb => cb(localStorage.getItem("spotify_token")),
+    volume: 0.5
+  });
+
+  spotifyPlayer.addListener("ready", ({ device_id }) => {
+    spotifyDeviceId = device_id;
+    document.getElementById("spotify-status").textContent = "Connected to Spotify ✔";
+  });
+
+  spotifyPlayer.connect();
+};
+
+document.getElementById("spotify-login").addEventListener("click", () => {
+  alert("Out of service. This is intentional.");
+});
+
+if (window.location.hash.includes("access_token")) {
+  const token = window.location.hash.split("access_token=")[1].split("&")[0];
+  localStorage.setItem("spotify_token", token);
+  document.getElementById("spotify-status").textContent = "Logged in ✔ Reloading...";
+  setTimeout(() => window.location.href = window.location.origin, 800);
+}
+
+document.getElementById("spotify-play").addEventListener("click", () => {
+  const trackUri = document.getElementById("spotify-track").value.trim();
+  const token = localStorage.getItem("spotify_token");
+
+  if (!trackUri || !token || !spotifyDeviceId) {
+    alert("Missing track URI, login, or device.");
+    return;
+  }
+
+  fetch(`https://api.spotify.com/v1/me/player/play?device_id=${spotifyDeviceId}`, {
+    method: "PUT",
+    body: JSON.stringify({ uris: [trackUri] }),
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token
+    }
+  });
+});
+
+// Calendar system
 
 const calGrid = document.getElementById("calendar-grid");
 const calMonthLabel = document.getElementById("cal-month");
