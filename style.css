@@ -156,11 +156,6 @@ body {
   background: var(--accent-yellow);
 }
 
-.spotify-status {
-  margin-top: 10px;
-  color: var(--accent-yellow);
-}
-
 .app-launch-btn {
   background: var(--accent-orange);
   color: #000;
@@ -195,9 +190,7 @@ body {
 button,
 .app-launch-btn,
 .xp-actions button,
-.pomo-controls button,
-.spotify-input-row button,
-#spotify-login {
+.pomo-controls button {
   border-radius: 20px;
   border: none;
   outline: none;
@@ -221,18 +214,14 @@ button:hover {
   color: #fff;
 }
 
-.pomo-controls button,
-.spotify-input-row button,
-#spotify-login {
+.pomo-controls button {
   background: var(--accent-orange);
   color: #000;
   font-weight: 600;
   padding: 6px 12px;
 }
 
-.pomo-controls button:hover,
-.spotify-input-row button:hover,
-#spotify-login:hover {
+.pomo-controls button:hover {
   background: var(--accent-dark-orange);
   color: #fff;
 }
@@ -242,17 +231,13 @@ button:hover {
   left: 0;
   right: 0;
   bottom: 0;
-
   height: 60px;
   background: linear-gradient(90deg, #050509, var(--taskbar-bg));
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 0 20px;
   border-top: 1px solid #222;
-
   backdrop-filter: blur(6px);
 }
 
