@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <title>Dawned Edu Web OS</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
 </head>
 
 <body>
@@ -15,11 +14,6 @@
             <div class="desktop-icon" data-target="window-pomodoro">
                 <img src="icons/pomodoro.png">
                 <span>Pomodoro</span>
-            </div>
-
-            <div class="desktop-icon" data-target="window-music">
-                <img src="icons/music.png">
-                <span>Music</span>
             </div>
 
             <div class="desktop-icon" data-target="window-motivation">
@@ -75,33 +69,6 @@
                     <button id="pomo-start">Start</button>
                     <button id="pomo-pause">Pause</button>
                     <button id="pomo-reset">Reset</button>
-                </div>
-            </div>
-
-            <div class="window-resize"></div>
-        </div>
-
-        <div class="window" id="window-music" style="top: 100px; left: 480px;">
-            <div class="window-header">
-                <span class="window-title">Music Player 🎧</span>
-                <div class="window-controls">
-                    <button class="btn-min">–</button>
-                    <button class="btn-close">×</button>
-                </div>
-            </div>
-
-            <div class="window-body">
-                <h2>Spotify Player</h2>
-
-                <button id="spotify-login">Login to Spotify</button>
-
-                <div id="spotify-status" class="spotify-status">
-                    Not connected
-                </div>
-
-                <div class="spotify-input-row">
-                    <input id="spotify-track" placeholder="Spotify track URI (  spotify:track:ID)" />
-                    <button id="spotify-play">Play</button>
                 </div>
             </div>
 
