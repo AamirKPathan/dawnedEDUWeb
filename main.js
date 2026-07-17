@@ -111,7 +111,7 @@ function updateClock() {
     minute: "2-digit"
   });
 
-  clockEl.textContent = `${day} ${dd}/${mm}/${yyyy} • ${time}`;
+  clockEl.textContent = `${day} ${dd}/${mm}/${yyyy} | ${time}`;
 }
 
 updateClock();

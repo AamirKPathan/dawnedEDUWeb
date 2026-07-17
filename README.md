@@ -1,6 +1,6 @@
 # Dawned Edu Web OS
 
-Dawned Edu Web OS is a browser-based mini operating system built with HTML, CSS, and JavaScript. It includes draggable windows, a taskbar, desktop icons, and several built-in apps for productivity and learning.
+Dawned Edu Web OS is a browser-based study desktop built with HTML, CSS, and JavaScript. It includes draggable windows, a taskbar, desktop icons, and a small set of productivity tools for studying, planning, and daily habit tracking.
 
 ## Features
 
@@ -17,14 +17,9 @@ Dawned Edu Web OS is a browser-based mini operating system built with HTML, CSS,
 - Automatic session switching
 - Alerts when sessions end
 
-### Spotify Player
-- Login with Spotify
-- Play tracks using Spotify URIs
-- Uses the Spotify Web Playback SDK
-
 ### Motivation Tab
-- Opens a custom link in a new tab
-- Displays a placeholder message
+- Opens the Dawned Motivation site in a new tab
+- Gives students a quick external motivation page without leaving the desktop layout
 
 ### Daily XP System
 - Earn XP for real-life tasks
@@ -38,6 +33,10 @@ Dawned Edu Web OS is a browser-based mini operating system built with HTML, CSS,
 - Add and delete events
 - Events saved in localStorage
 - Highlights the current day
+
+### Google Shortcut
+- Opens Google Search in a new tab
+- Keeps quick research one click away from the study desktop
 
 ## Getting Started
 
@@ -57,8 +56,7 @@ You can modify:
 ## Requirements
 
 - Chrome, Edge, Firefox, or Safari
-- Internet connection for Spotify playback
-- Spotify Premium account (required for the Web Playback SDK)
+- Internet connection for external links
 
 ## License
 
